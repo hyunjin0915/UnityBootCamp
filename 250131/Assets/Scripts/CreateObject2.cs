@@ -1,0 +1,24 @@
+using UnityEngine;
+
+public class CreateObject2 : MonoBehaviour
+{
+    public GameObject prefab;
+
+    private GameObject square;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        square = Instantiate(prefab);
+
+        Destroy(square, 5f);
+
+        Debug.Log("파괴되었습니다.");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
