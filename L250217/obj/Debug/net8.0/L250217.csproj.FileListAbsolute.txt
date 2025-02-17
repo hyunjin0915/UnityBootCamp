@@ -1,0 +1,5 @@
+C:\hj\GitHub\UnityBootCamp\L250217\obj\Debug\net8.0\L250217.GeneratedMSBuildEditorConfig.editorconfig
+C:\hj\GitHub\UnityBootCamp\L250217\obj\Debug\net8.0\L250217.AssemblyInfoInputs.cache
+C:\hj\GitHub\UnityBootCamp\L250217\obj\Debug\net8.0\L250217.AssemblyInfo.cs
+C:\hj\GitHub\UnityBootCamp\L250217\obj\Debug\net8.0\L250217.csproj.CoreCompileInputs.cache
+C:\hj\GitHub\UnityBootCamp\L250217\obj\Debug\net8.0\L250217.sourcelink.json

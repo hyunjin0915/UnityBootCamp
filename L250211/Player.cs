@@ -6,42 +6,34 @@ using System.Threading.Tasks;
 
 namespace L250211
 {
-    public class Player
+    public class Player : GameObject
     {
-        public int hp;
-        public int attack;
-        public int gold;
-        public bool isAlive;
-
-        public Player(int hp, int attack, int gold, bool isAlive)
+        public Player(int inX, int inY, char inShape)
         {
-            this.hp = hp;
-            this.attack = attack;
-            this.gold = gold;
-            this.isAlive = isAlive;
-        }
-        ~Player()
-        {
-            Console.WriteLine("플레이어 소멸자");
+            X = inX;
+            Y = inY;
+            Shape = inShape;
         }
 
-        public void Attack(Monster monster)
+        public override void Update()
         {
-            monster.Hp -= attack;
-            gold += monster.monGold;
-
-            if(monster.Hp < 0)
+            if(Input.GetKeyDown(ConsoleKey.W))
             {
-                monster.isAlive = false;
+                Y--;
             }
-        }
-        public void Move()
-        {
-
-        }
-        public void GetGold(int _gold)
-        {
-            gold += _gold;
+            else if (Input.GetKeyDown(ConsoleKey.A))
+            {
+                X--;
+            }
+            else if(Input.GetKeyDown(ConsoleKey.S))
+            {
+                Y++;
+            }
+            else if(Input.GetKeyDown(ConsoleKey.D))
+            {
+                
+;               X++;
+            }
         }
     }
 }
