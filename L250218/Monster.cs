@@ -19,21 +19,43 @@ namespace L250218
         public override void Update()
         {
             int direction = random.Next() % 4;
-            if (direction == 0 && Y > 1)
+
+            int temp = 0;
+            if (direction == 0)
             {
-                Y--;
+                temp = Y - 1;
+                if (Engine.Instance.scene[X][temp] != '*')
+                {
+                    Y--;
+                }
+                   
             }
-            else if (direction == 1 && Y <8)
+            else if (direction == 1)
             {
-                Y++;
+                temp = Y + 1;
+                if (Engine.Instance.scene[X][temp] != '*')
+                {
+                    Y++;
+                }
+                    
             }
-            else if (direction == 2 && X < 8)
+            else if (direction == 2)
             {
-                X++;
+                temp = X + 1;
+                if (Engine.Instance.scene[X][temp] != '*')
+                {
+                    X++;
+                }
+                    
             }
-            else if (direction == 3 && X > 1)
+            else if (direction == 3)
             {
-                X--;
+                temp = X - 1;
+                if (Engine.Instance.scene[X][temp] != '*')
+                {
+                    X--;
+                }
+                    
             }
         }
         

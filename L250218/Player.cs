@@ -17,22 +17,42 @@ namespace L250218
 
         public override void Update()
         {
-            if(Input.GetKeyDown(ConsoleKey.W) && Y > 1)
+            int temp = 0;
+            if(Input.GetKeyDown(ConsoleKey.W) )
             {
-                Y--;
+                temp = Y - 1;
+                if (Engine.Instance.scene[X][temp]!='*')
+                {
+                    Y--;
+                }
+                
             }
-            else if (Input.GetKeyDown(ConsoleKey.A) && X > 1)
+            else if (Input.GetKeyDown(ConsoleKey.A) )
             {
-                X--;
+                temp = X - 1;
+                if (Engine.Instance.scene[X][temp] != '*')
+                {
+                    X--;
+                }
+                    
             }
-            else if (Input.GetKeyDown(ConsoleKey.S) && Y <8)
+            else if (Input.GetKeyDown(ConsoleKey.S) )
             {
-                Y++;
+                temp = Y + 1;
+                if (Engine.Instance.scene[X][temp] != '*')
+                {
+                    Y++;
+                }
+          
             }
-            else if (Input.GetKeyDown(ConsoleKey.D) && X <8)
+            else if (Input.GetKeyDown(ConsoleKey.D) )
             {
-
-                ; X++;
+                temp = X + 1;
+                if (Engine.Instance.scene[X][temp] != '*')
+                {
+                    X++;
+                }
+         
             }
         }
     }

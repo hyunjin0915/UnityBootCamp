@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +11,8 @@
       "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\floor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:floor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,6 +29,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\floor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:floor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,24 +50,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 209,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "World.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\World.cs",
               "RelativeDocumentMoniker": "World.cs",
               "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\World.cs",
               "RelativeToolTip": "World.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxYAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvxAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-18T00:11:32.97Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Wall.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Wall.cs",
               "RelativeDocumentMoniker": "Wall.cs",
@@ -80,33 +80,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Player.cs",
-              "RelativeDocumentMoniker": "Player.cs",
-              "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Player.cs",
-              "RelativeToolTip": "Player.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T00:11:01.413Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Monster.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Monster.cs",
               "RelativeDocumentMoniker": "Monster.cs",
               "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Monster.cs",
               "RelativeToolTip": "Monster.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAADwvxQAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwDIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-18T00:10:48.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "Input.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Input.cs",
               "RelativeDocumentMoniker": "Input.cs",
@@ -119,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Goal.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Goal.cs",
               "RelativeDocumentMoniker": "Goal.cs",
@@ -132,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "GameObject.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\GameObject.cs",
               "RelativeDocumentMoniker": "GameObject.cs",
@@ -145,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Floor.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Floor.cs",
               "RelativeDocumentMoniker": "Floor.cs",
@@ -158,20 +145,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Engine.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Engine.cs",
               "RelativeDocumentMoniker": "Engine.cs",
               "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Engine.cs",
               "RelativeToolTip": "Engine.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAApwCAAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAIwCUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-18T00:08:13.806Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -180,6 +167,40 @@
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-18T00:07:38.272Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "64e4d0c1-45be-47ee-88eb-2a518da48b4f",
+        "Display": 0,
+        "X": 1031,
+        "Y": 141,
+        "Width": 971,
+        "Height": 706,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Player.cs",
+              "RelativeDocumentMoniker": "Player.cs",
+              "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Player.cs",
+              "RelativeToolTip": "Player.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAIwDMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T00:11:01.413Z",
               "EditorCaption": ""
             }
           ]

@@ -26,9 +26,11 @@ namespace L250218
         Player player;
         protected bool isRunning = true;
 
+        public string[] scene;
+
         public void Load()
         {
-            string[] scene =
+            scene = new string[]
             {
                 "**********",
                 "*P       *",
