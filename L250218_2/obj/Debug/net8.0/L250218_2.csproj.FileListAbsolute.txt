@@ -1,0 +1,15 @@
+C:\hj\GitHub\UnityBootCamp\L250218_2\bin\Debug\net8.0\L250218_2.exe
+C:\hj\GitHub\UnityBootCamp\L250218_2\bin\Debug\net8.0\L250218_2.deps.json
+C:\hj\GitHub\UnityBootCamp\L250218_2\bin\Debug\net8.0\L250218_2.runtimeconfig.json
+C:\hj\GitHub\UnityBootCamp\L250218_2\bin\Debug\net8.0\L250218_2.dll
+C:\hj\GitHub\UnityBootCamp\L250218_2\bin\Debug\net8.0\L250218_2.pdb
+C:\hj\GitHub\UnityBootCamp\L250218_2\obj\Debug\net8.0\L250218_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\hj\GitHub\UnityBootCamp\L250218_2\obj\Debug\net8.0\L250218_2.AssemblyInfoInputs.cache
+C:\hj\GitHub\UnityBootCamp\L250218_2\obj\Debug\net8.0\L250218_2.AssemblyInfo.cs
+C:\hj\GitHub\UnityBootCamp\L250218_2\obj\Debug\net8.0\L250218_2.csproj.CoreCompileInputs.cache
+C:\hj\GitHub\UnityBootCamp\L250218_2\obj\Debug\net8.0\L250218_2.sourcelink.json
+C:\hj\GitHub\UnityBootCamp\L250218_2\obj\Debug\net8.0\L250218_2.dll
+C:\hj\GitHub\UnityBootCamp\L250218_2\obj\Debug\net8.0\refint\L250218_2.dll
+C:\hj\GitHub\UnityBootCamp\L250218_2\obj\Debug\net8.0\L250218_2.pdb
+C:\hj\GitHub\UnityBootCamp\L250218_2\obj\Debug\net8.0\L250218_2.genruntimeconfig.cache
+C:\hj\GitHub\UnityBootCamp\L250218_2\obj\Debug\net8.0\ref\L250218_2.dll

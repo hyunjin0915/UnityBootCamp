@@ -15,16 +15,26 @@ namespace L250218
             Y = _Y;
             Shape = _Shape;
         }
+        public override bool OnCollisionEnter(char colliison)
+        {
+            if (colliison == ' ')
+            {
+                return false;
+            }
+            
+            return true;
+        }
 
         public override void Update()
         {
             int direction = random.Next() % 4;
+            //int direction = 0;
 
             int temp = 0;
             if (direction == 0)
             {
                 temp = Y - 1;
-                if (Engine.Instance.scene[X][temp] != '*')
+                if (!OnCollisionEnter(Engine.Instance.scene[X][temp]))
                 {
                     Y--;
                 }
@@ -33,7 +43,7 @@ namespace L250218
             else if (direction == 1)
             {
                 temp = Y + 1;
-                if (Engine.Instance.scene[X][temp] != '*')
+                if (!OnCollisionEnter(Engine.Instance.scene[X][temp]))
                 {
                     Y++;
                 }
@@ -42,7 +52,7 @@ namespace L250218
             else if (direction == 2)
             {
                 temp = X + 1;
-                if (Engine.Instance.scene[temp][Y] != '*')
+                if (!OnCollisionEnter(Engine.Instance.scene[temp][Y]))
                 {
                     X++;
                 }
@@ -51,12 +61,13 @@ namespace L250218
             else if (direction == 3)
             {
                 temp = X - 1;
-                if (Engine.Instance.scene[temp][Y] != '*')
+                if (!OnCollisionEnter(Engine.Instance.scene[temp][Y]))
                 {
                     X--;
                 }
                     
             }
+
         }
         
     }

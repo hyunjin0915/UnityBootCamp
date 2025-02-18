@@ -15,45 +15,76 @@ namespace L250218
             Shape = _Shape;
         }
 
+        public override bool OnCollisionEnter(GameObject colliison)
+        {
+            if (X == colliison.X && Y == colliison.Y)
+            {
+                return true;
+            }
+            else return false;
+        }
+        public override bool OnCollisionEnter(char colliison)
+        {
+            if (colliison == ' ')
+            {
+                return false;
+            }
+            else if (colliison == '*')
+            {
+                return true;
+            }
+            
+            else return false;
+        }
+        
+        int temp = 0;
         public override void Update()
         {
-            int temp = 0;
+            
             if(Input.GetKeyDown(ConsoleKey.W) )
             {
                 temp = Y - 1;
-                if (Engine.Instance.scene[X][temp]!='*')
+                if(!OnCollisionEnter(Engine.Instance.scene[X][temp]))
                 {
                     Y--;
+                    
                 }
-                
             }
             else if (Input.GetKeyDown(ConsoleKey.A) )
             {
                 temp = X - 1;
-                if (Engine.Instance.scene[temp][Y] != '*')
+                if (!OnCollisionEnter(Engine.Instance.scene[temp][Y]))
                 {
                     X--;
-                }
                     
+                }
             }
             else if (Input.GetKeyDown(ConsoleKey.S) )
             {
                 temp = Y + 1;
-                if (Engine.Instance.scene[X][temp] != '*')
+                if (!OnCollisionEnter(Engine.Instance.scene[X][temp]))
                 {
                     Y++;
+                    
                 }
-          
             }
             else if (Input.GetKeyDown(ConsoleKey.D) )
             {
                 temp = X + 1;
-                if (Engine.Instance.scene[temp][X] != '*')
+                if (!OnCollisionEnter(Engine.Instance.scene[temp][Y]))
                 {
                     X++;
+                    
                 }
-         
             }
         }
+
+        public void GameOver()
+        {
+            
+                
+            
+        }
+
     }
 }

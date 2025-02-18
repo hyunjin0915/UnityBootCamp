@@ -15,5 +15,12 @@ namespace L250218
             Shape = _Shape;
         }
 
-    }
+        public override void Update()
+        {
+            if (Engine.Instance.player.X == X && Engine.Instance.player.Y == Y)
+            {
+                Engine.Instance.isRunning = false;
+            }
+        }
+}
 }

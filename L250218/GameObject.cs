@@ -21,5 +21,14 @@ namespace L250218
             Console.SetCursorPosition(X, Y);
             Console.Write(Shape);
         }
+
+        public virtual bool OnCollisionEnter(GameObject colliison)
+        {
+            return false;
+        }
+        public virtual bool OnCollisionEnter(char colliison)
+        {
+            return false;
+        }
     }
 }

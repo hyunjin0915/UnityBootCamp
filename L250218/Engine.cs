@@ -23,8 +23,10 @@ namespace L250218
         }
 
         public World world;
-        Player player;
-        protected bool isRunning = true;
+        public Player player;
+        public Monster monster;
+        public Goal goal;
+        public bool isRunning = true;
 
         public string[] scene;
 
@@ -69,13 +71,13 @@ namespace L250218
                     }
                     else if (scene[y][x] == 'M')
                     {
-                        Monster monster = new Monster(x, y, scene[y][x]);
+                        monster = new Monster(x, y, scene[y][x]);
 
                         world.Instantiate(monster);
                     }
                     else if (scene[y][x] == 'G')
                     {
-                        Goal goal = new Goal(x, y, scene[y][x]);
+                        goal = new Goal(x, y, scene[y][x]);
 
                         world.Instantiate(goal);
                     }
@@ -99,11 +101,30 @@ namespace L250218
         }
         public void Run()
         {
-            while (true)
+            while (isRunning)
             {
                 InputProcess();
                 Update();
                 Render();
+                GameOver();
+                NextLevel();
+            }
+            Console.Clear();
+            Console.WriteLine("게임 끝");
+        }
+        public void GameOver()
+        {
+            if(player.X == monster.X && player.Y == monster.Y)
+            {
+                isRunning = false;
+            }
+        }
+        public void NextLevel()
+        {
+            if (player.X == goal.X && player.Y == goal.Y)
+            {
+                player.X = 1;
+                player.Y = 1;
             }
         }
     }
