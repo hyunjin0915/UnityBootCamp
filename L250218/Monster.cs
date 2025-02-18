@@ -42,7 +42,7 @@ namespace L250218
             else if (direction == 2)
             {
                 temp = X + 1;
-                if (Engine.Instance.scene[X][temp] != '*')
+                if (Engine.Instance.scene[temp][Y] != '*')
                 {
                     X++;
                 }
@@ -51,7 +51,7 @@ namespace L250218
             else if (direction == 3)
             {
                 temp = X - 1;
-                if (Engine.Instance.scene[X][temp] != '*')
+                if (Engine.Instance.scene[temp][Y] != '*')
                 {
                     X--;
                 }

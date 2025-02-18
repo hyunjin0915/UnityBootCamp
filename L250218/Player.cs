@@ -30,7 +30,7 @@ namespace L250218
             else if (Input.GetKeyDown(ConsoleKey.A) )
             {
                 temp = X - 1;
-                if (Engine.Instance.scene[X][temp] != '*')
+                if (Engine.Instance.scene[temp][Y] != '*')
                 {
                     X--;
                 }
@@ -48,7 +48,7 @@ namespace L250218
             else if (Input.GetKeyDown(ConsoleKey.D) )
             {
                 temp = X + 1;
-                if (Engine.Instance.scene[X][temp] != '*')
+                if (Engine.Instance.scene[temp][X] != '*')
                 {
                     X++;
                 }
