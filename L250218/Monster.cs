@@ -14,15 +14,8 @@ namespace L250218
             X = _X;
             Y = _Y;
             Shape = _Shape;
-        }
-        public override bool OnCollisionEnter(char colliison)
-        {
-            if (colliison == ' ')
-            {
-                return false;
-            }
-            
-            return true;
+            OrderLayer = 5;
+            isTrigger = true;
         }
 
         public override void Update()
@@ -34,7 +27,7 @@ namespace L250218
             if (direction == 0)
             {
                 temp = Y - 1;
-                if (!OnCollisionEnter(Engine.Instance.scene[X][temp]))
+                if (!PredictionCollection(X, Y - 1))
                 {
                     Y--;
                 }
@@ -43,7 +36,7 @@ namespace L250218
             else if (direction == 1)
             {
                 temp = Y + 1;
-                if (!OnCollisionEnter(Engine.Instance.scene[X][temp]))
+                if (!PredictionCollection(X, Y + 1))
                 {
                     Y++;
                 }
@@ -52,7 +45,7 @@ namespace L250218
             else if (direction == 2)
             {
                 temp = X + 1;
-                if (!OnCollisionEnter(Engine.Instance.scene[temp][Y]))
+                if (!PredictionCollection(X + 1, Y))
                 {
                     X++;
                 }
@@ -61,7 +54,7 @@ namespace L250218
             else if (direction == 3)
             {
                 temp = X - 1;
-                if (!OnCollisionEnter(Engine.Instance.scene[temp][Y]))
+                if (!PredictionCollection(X - 1, Y))
                 {
                     X--;
                 }

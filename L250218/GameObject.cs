@@ -11,7 +11,25 @@ namespace L250218
         public GameObject() { }
         public int X, Y;
         public char Shape;
+        public int OrderLayer;
+        public bool isTrigger = false;
+        public bool isCollide = false;
 
+        public bool PredictionCollection(int newX, int newY)
+        {
+            for (int i = 0; i < Engine.Instance.world.GetAllGameObjects.Count; i++)
+            {
+                if (Engine.Instance.world.GetAllGameObjects[i].isCollide)
+                {
+                    if ((Engine.Instance.world.GetAllGameObjects[i].X == newX) &&
+                        (Engine.Instance.world.GetAllGameObjects[i].Y == newY))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
         public virtual void Update()
         {
 
@@ -22,13 +40,5 @@ namespace L250218
             Console.Write(Shape);
         }
 
-        public virtual bool OnCollisionEnter(GameObject colliison)
-        {
-            return false;
-        }
-        public virtual bool OnCollisionEnter(char colliison)
-        {
-            return false;
-        }
     }
 }

@@ -13,6 +13,8 @@ namespace L250218
             X = _X;
             Y = _Y;
             Shape = _Shape;
+            OrderLayer = 3;
+            isTrigger = true;
         }
 
         public override void Update()

@@ -28,26 +28,57 @@ namespace L250218
         public Goal goal;
         public bool isRunning = true;
 
-        public string[] scene;
+        List<string> scene;
 
-        public void Load()
+        public void Load(string path)
         {
-            scene = new string[]
+            /*string tempScene = "";
+            byte[] buffer = new byte[1024];
+            FileStream fs = new FileStream("level01.map", FileMode.Open);
+            int offset = 0;
+
+            fs.Seek(0, SeekOrigin.End); //커러를 맨끝으로 보냄
+            long fileSize = fs.Position;
+
+            fs.Seek(0, SeekOrigin.Begin); //다시 커서 처음으로
+            int readCount = fs.Read(buffer, 0, (int)fileSize);
+            tempScene = Encoding.UTF8.GetString(buffer);
+            tempScene = tempScene.Replace("\0", "");
+            scene = tempScene.Split("\r\n");
+*/
+
+            StreamReader sr = null;
+
+            try
             {
-                "**********",
-                "*P       *",
-                "*        *",
-                "*        *",
-                "*        *",
-                "*   M    *",
-                "*        *",
-                "*        *",
-                "*       G*",
-                "**********"
-            };
+                scene = new List<string>();
+
+                sr = new StreamReader(path);
+                while (!sr.EndOfStream)
+                {
+                    scene.Add(sr.ReadLine());
+                }
+                sr.Close();
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine(e.FileName);
+                Console.WriteLine(e.Source);
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("여기는 파일 처리 예외말고 다른 예외");
+            }
+            finally
+            {
+                Console.WriteLine("network, 파일 입출력 처리하는 부분");
+                sr.Close (); //잘 안됐어도 파일을 닫기는 해야 하니까
+            }
+            
 
             world = new World();
-            for (int y = 0; y < scene.Length; y++)
+            for (int y = 0; y < scene.Count; y++)
             {
                 for (int x = 0; x < scene[y].Length; x++)
                 {
@@ -83,7 +114,7 @@ namespace L250218
                     }
                 }
             }
-
+            world.Sort();
         }
 
         public void InputProcess()

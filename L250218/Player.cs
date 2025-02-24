@@ -13,68 +13,39 @@ namespace L250218
             X = _X;
             Y = _Y;
             Shape = _Shape;
-        }
-
-        public override bool OnCollisionEnter(GameObject colliison)
-        {
-            if (X == colliison.X && Y == colliison.Y)
-            {
-                return true;
-            }
-            else return false;
-        }
-        public override bool OnCollisionEnter(char colliison)
-        {
-            if (colliison == ' ')
-            {
-                return false;
-            }
-            else if (colliison == '*')
-            {
-                return true;
-            }
-            
-            else return false;
+            OrderLayer = 4;
+            isTrigger = true;
         }
         
-        int temp = 0;
         public override void Update()
         {
             
             if(Input.GetKeyDown(ConsoleKey.W) )
             {
-                temp = Y - 1;
-                if(!OnCollisionEnter(Engine.Instance.scene[X][temp]))
+                if(!PredictionCollection(X, Y-1))
                 {
                     Y--;
-                    
                 }
             }
             else if (Input.GetKeyDown(ConsoleKey.A) )
             {
-                temp = X - 1;
-                if (!OnCollisionEnter(Engine.Instance.scene[temp][Y]))
+                if (!PredictionCollection(X-1, Y))
                 {
                     X--;
-                    
                 }
             }
             else if (Input.GetKeyDown(ConsoleKey.S) )
             {
-                temp = Y + 1;
-                if (!OnCollisionEnter(Engine.Instance.scene[X][temp]))
+                if (!PredictionCollection(X, Y+ 1))
                 {
                     Y++;
-                    
                 }
             }
             else if (Input.GetKeyDown(ConsoleKey.D) )
             {
-                temp = X + 1;
-                if (!OnCollisionEnter(Engine.Instance.scene[temp][Y]))
+                if (!PredictionCollection(X+1, Y))
                 {
                     X++;
-                    
                 }
             }
         }

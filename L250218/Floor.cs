@@ -13,6 +13,8 @@ namespace L250218
             X = _X;
             Y = _Y;
             Shape = _Shape;
+            OrderLayer = 1;
+
         }
 
         public override void Render()
