@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\hj\\GitHub\\UnityBootCamp\\L250211\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5A5C3991-F3E3-4883-9955-36099D20ED56}|L250211.csproj|c:\\hj\\github\\unitybootcamp\\l250211\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A5C3991-F3E3-4883-9955-36099D20ED56}|L250211.csproj|solutionrelative:engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5A5C3991-F3E3-4883-9955-36099D20ED56}|L250211.csproj|c:\\hj\\github\\unitybootcamp\\l250211\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A5C3991-F3E3-4883-9955-36099D20ED56}|L250211.csproj|solutionrelative:gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5C3991-F3E3-4883-9955-36099D20ED56}|L250211.csproj|c:\\hj\\github\\unitybootcamp\\l250211\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A5C3991-F3E3-4883-9955-36099D20ED56}|L250211.csproj|solutionrelative:engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5A5C3991-F3E3-4883-9955-36099D20ED56}|L250211.csproj|c:\\hj\\github\\unitybootcamp\\l250211\\floor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,17 +42,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 209,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Engine.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250211\\Engine.cs",
               "RelativeDocumentMoniker": "Engine.cs",
               "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250211\\Engine.cs",
               "RelativeToolTip": "Engine.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAA6wFkAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAowFkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T02:55:16.64Z",
               "IsPinned": true,
@@ -68,8 +68,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T00:30:13.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T00:30:13.847Z"
             },
             {
               "$type": "Document",
@@ -81,12 +80,11 @@
               "RelativeToolTip": "Player.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T00:26:49.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T00:26:49.208Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GameObject.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250211\\GameObject.cs",
               "RelativeDocumentMoniker": "GameObject.cs",
@@ -107,8 +105,7 @@
               "RelativeToolTip": "Goal.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T02:42:00.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T02:42:00.332Z"
             },
             {
               "$type": "Document",
@@ -120,8 +117,7 @@
               "RelativeToolTip": "Wall.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T02:36:07.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T02:36:07.643Z"
             },
             {
               "$type": "Document",
@@ -133,8 +129,7 @@
               "RelativeToolTip": "Floor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T02:35:52.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T02:35:52.573Z"
             },
             {
               "$type": "Document",
@@ -146,8 +141,7 @@
               "RelativeToolTip": "Monster.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAADwvyEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T00:06:10.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T00:06:10.517Z"
             }
           ]
         }

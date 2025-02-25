@@ -17,8 +17,5 @@ namespace L250218
 
         }
 
-        public override void Render()
-        {
-        }
     }
 }

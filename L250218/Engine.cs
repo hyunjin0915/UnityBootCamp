@@ -30,6 +30,10 @@ namespace L250218
 
         List<string> scene;
 
+        //더블 버퍼링
+        static public char[,] frontBuffer = new char[20, 40];
+        static public char[,] backBuffer = new char[20, 40];
+
         public void Load(string path)
         {
             /*string tempScene = "";
@@ -49,33 +53,16 @@ namespace L250218
 
             StreamReader sr = null;
 
-            try
-            {
-                scene = new List<string>();
 
-                sr = new StreamReader(path);
-                while (!sr.EndOfStream)
-                {
-                    scene.Add(sr.ReadLine());
-                }
-                sr.Close();
-            }
-            catch (FileNotFoundException e)
+            scene = new List<string>();
+
+            sr = new StreamReader(path);
+            while (!sr.EndOfStream)
             {
-                Console.WriteLine(e.FileName);
-                Console.WriteLine(e.Source);
-                Console.WriteLine(e.Message);
+                scene.Add(sr.ReadLine());
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("여기는 파일 처리 예외말고 다른 예외");
-            }
-            finally
-            {
-                Console.WriteLine("network, 파일 입출력 처리하는 부분");
-                sr.Close (); //잘 안됐어도 파일을 닫기는 해야 하니까
-            }
-            
+            sr.Close();
+
 
             world = new World();
             for (int y = 0; y < scene.Count; y++)
@@ -90,9 +77,9 @@ namespace L250218
                     }
                     else if (scene[y][x] == ' ')
                     {
-                        Floor floor = new Floor(x, y, scene[y][x]);
+                        /*Floor floor = new Floor(x, y, scene[y][x]);
 
-                        world.Instantiate(floor);
+                        world.Instantiate(floor);*/
                     }
                     else if (scene[y][x] == 'P')
                     {
@@ -112,6 +99,10 @@ namespace L250218
 
                         world.Instantiate(goal);
                     }
+
+                    Floor floor = new Floor(x, y,' ');
+
+                    world.Instantiate(floor);
                 }
             }
             world.Sort();
@@ -119,6 +110,7 @@ namespace L250218
 
         public void InputProcess()
         {
+            
             Input.Process();
         }
         protected void Update()
@@ -127,18 +119,47 @@ namespace L250218
         }
         protected void Render()
         {
-            Console.Clear();
+            //Console.Clear();
             world.Render();
+
+            //back <-> front (flip)
+            for (int Y = 0; Y < 20; Y++)
+            {
+                for (int X = 0; X < 40; X++)
+                {
+                    if (frontBuffer[Y,X] != backBuffer[Y,X])
+                    {
+                        frontBuffer[Y, X] = backBuffer[Y, X];
+                        Console.SetCursorPosition(X, Y);
+                        Console.Write(backBuffer[Y, X]);
+                    }
+                    
+                }
+            }
         }
         public void Run()
         {
+            float frameTime = 1000.0f / 60.0f;
+            float elapseTime = 0.0f;
+            Console.CursorVisible = false;
             while (isRunning)
             {
-                InputProcess();
-                Update();
-                Render();
-                GameOver();
-                NextLevel();
+                Time.Update();
+                /*if(elapseTime >= frameTime)
+                {
+                  */  InputProcess();
+                    Update();
+                    Render();
+                    Input.ClearInput(); //입력장치 버퍼를 비워줘야 함 
+                    elapseTime = 0.0f;
+                /*}
+                else
+                {*/
+                    //elapseTime += Time.deltaTime;
+                //}
+
+               // GameOver();
+               // NextLevel();
             }
             Console.Clear();
             Console.WriteLine("게임 끝");

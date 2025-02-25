@@ -50,8 +50,7 @@
               "RelativeToolTip": "Floor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T07:41:10.722Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T07:41:10.722Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "Wall.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvw8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T07:41:02.944Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T07:41:02.944Z"
             },
             {
               "$type": "Document",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "Monster.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T07:38:03.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T07:38:03.101Z"
             },
             {
               "$type": "Document",
@@ -101,8 +98,7 @@
               "RelativeToolTip": "Player.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvw8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T07:36:59.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T07:36:59.422Z"
             },
             {
               "$type": "Document",
@@ -112,7 +108,7 @@
               "RelativeDocumentMoniker": "World.cs",
               "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250210\\World.cs",
               "RelativeToolTip": "World.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T07:36:43.47Z",
               "EditorCaption": ""
@@ -127,8 +123,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T01:19:08.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T01:19:08.425Z"
             }
           ]
         }

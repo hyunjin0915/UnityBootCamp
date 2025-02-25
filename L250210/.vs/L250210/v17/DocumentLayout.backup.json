@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\hj\\GitHub\\UnityBootCamp\\L250210\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|c:\\hj\\github\\unitybootcamp\\l250210\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|c:\\hj\\github\\unitybootcamp\\l250210\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|solutionrelative:world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|c:\\hj\\github\\unitybootcamp\\l250210\\wall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|solutionrelative:wall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|c:\\hj\\github\\unitybootcamp\\l250210\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,20 +19,16 @@
       "RelativeMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|solutionrelative:monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|c:\\hj\\github\\unitybootcamp\\l250210\\goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|solutionrelative:goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|c:\\hj\\github\\unitybootcamp\\l250210\\floor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|solutionrelative:floor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|c:\\hj\\github\\unitybootcamp\\l250210\\wall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|solutionrelative:wall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|c:\\hj\\github\\unitybootcamp\\l250210\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|c:\\hj\\github\\unitybootcamp\\l250210\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|solutionrelative:world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|c:\\hj\\github\\unitybootcamp\\l250210\\goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F476CF-509E-42C5-98C9-3246C1DF6EF3}|L250210.csproj|solutionrelative:goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -55,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Wall.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250210\\Wall.cs",
               "RelativeDocumentMoniker": "Wall.cs",
@@ -68,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Goal.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250210\\Goal.cs",
               "RelativeDocumentMoniker": "Goal.cs",
@@ -76,12 +76,11 @@
               "RelativeToolTip": "Goal.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T07:38:54.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T07:38:54.157Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Monster.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250210\\Monster.cs",
               "RelativeDocumentMoniker": "Monster.cs",
@@ -94,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250210\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
@@ -107,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "World.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250210\\World.cs",
               "RelativeDocumentMoniker": "World.cs",
@@ -120,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250210\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

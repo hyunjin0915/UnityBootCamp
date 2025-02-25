@@ -9,6 +9,8 @@ namespace L250218
     public class Monster : GameObject
     {
         private Random random = new Random();
+
+        private float elapseTime = 0.005f;
         public Monster(int _X, int _Y, char _Shape)
         {
             X = _X;
@@ -20,47 +22,56 @@ namespace L250218
 
         public override void Update()
         {
-            int direction = random.Next() % 4;
-            //int direction = 0;
+            if(elapseTime > 0.05f)
+            {
+                elapseTime = 0.0f;
+                int direction = random.Next() % 4;
+                //int direction = 0;
 
-            int temp = 0;
-            if (direction == 0)
-            {
-                temp = Y - 1;
-                if (!PredictionCollection(X, Y - 1))
+                int temp = 0;
+                if (direction == 0)
                 {
-                    Y--;
+                    temp = Y - 1;
+                    if (!PredictionCollection(X, Y - 1))
+                    {
+                        Y--;
+                    }
+
                 }
-                   
-            }
-            else if (direction == 1)
-            {
-                temp = Y + 1;
-                if (!PredictionCollection(X, Y + 1))
+                else if (direction == 1)
                 {
-                    Y++;
+                    temp = Y + 1;
+                    if (!PredictionCollection(X, Y + 1))
+                    {
+                        Y++;
+                    }
+
                 }
-                    
-            }
-            else if (direction == 2)
-            {
-                temp = X + 1;
-                if (!PredictionCollection(X + 1, Y))
+                else if (direction == 2)
                 {
-                    X++;
+                    temp = X + 1;
+                    if (!PredictionCollection(X + 1, Y))
+                    {
+                        X++;
+                    }
+
                 }
-                    
-            }
-            else if (direction == 3)
-            {
-                temp = X - 1;
-                if (!PredictionCollection(X - 1, Y))
+                else if (direction == 3)
                 {
-                    X--;
+                    temp = X - 1;
+                    if (!PredictionCollection(X - 1, Y))
+                    {
+                        X--;
+                    }
+
                 }
-                    
             }
 
+            else
+            {
+                elapseTime += Time.deltaTime;
+            }
+            
         }
         
     }

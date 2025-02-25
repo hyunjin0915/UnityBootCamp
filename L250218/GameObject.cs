@@ -36,8 +36,9 @@ namespace L250218
         }
         public virtual void Render()
         {
-            Console.SetCursorPosition(X, Y);
-            Console.Write(Shape);
+            Engine.backBuffer[Y, X] = Shape;
+            /*Console.SetCursorPosition(X, Y);
+            Console.Write(Shape);*/
         }
 
     }
