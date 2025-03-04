@@ -18,20 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "L250217",
+              "Title": "L250217.csproj",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250217\\L250217.csproj",
               "RelativeDocumentMoniker": "L250217.csproj",
               "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250217\\L250217.csproj",
               "RelativeToolTip": "L250217.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-17T06:58:11.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T06:58:11.5Z"
             },
             {
               "$type": "Document",
@@ -39,9 +38,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250217\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250217\\Program.cs*",
-              "RelativeToolTip": "Program.cs*",
-              "ViewState": "AgIAABYAAAAAAAAAAAAUwCQAAAARAAAAAAAAAA==",
+              "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250217\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAUwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T06:37:28.759Z",
               "EditorCaption": ""

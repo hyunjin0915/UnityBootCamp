@@ -18,11 +18,15 @@ namespace L250218
             Shape = _Shape;
             OrderLayer = 5;
             isTrigger = true;
+
+            color.r = 100;
+            color.g = 100;
+            color.b = 100;
         }
 
         public override void Update()
         {
-            if(elapseTime > 0.05f)
+            if(elapseTime >=500.0f)
             {
                 elapseTime = 0.0f;
                 int direction = random.Next() % 4;

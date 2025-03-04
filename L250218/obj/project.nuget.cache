@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iQCIiN+VnUg=",
+  "dgSpecHash": "DXAKCyYsxfM=",
   "success": true,
   "projectFilePath": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\L250218.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\hyunj\\.nuget\\packages\\sayers.sdl2.core\\1.0.11\\sayers.sdl2.core.1.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

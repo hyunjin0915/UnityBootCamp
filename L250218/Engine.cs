@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SDL2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,39 @@ namespace L250218
         public Monster monster;
         public Goal goal;
         public bool isRunning = true;
+
+        
+        public IntPtr myWindow;
+        public IntPtr myRenderer;
+        public SDL.SDL_Event myEvent;
+        public bool Init()
+        {
+            if (SDL.SDL_Init(SDL.SDL_INIT_EVERYTHING) < 0)
+            {
+                Console.WriteLine("Fail Init");
+                return false;
+            }
+
+            myWindow = SDL.SDL_CreateWindow( 
+                "Game",
+                100, 100,
+                640, 480,
+                SDL.SDL_WindowFlags.SDL_WINDOW_SHOWN);
+
+            myRenderer = SDL.SDL_CreateRenderer(myWindow, -1, SDL.SDL_RendererFlags.SDL_RENDERER_ACCELERATED |
+                SDL.SDL_RendererFlags.SDL_RENDERER_PRESENTVSYNC |
+                SDL.SDL_RendererFlags.SDL_RENDERER_TARGETTEXTURE);  
+
+            return true;
+        }
+        public bool Quit()
+        {
+            SDL.SDL_DestroyWindow(myWindow); //지우기
+
+            SDL.SDL_Quit(); //라이브러리도 지워줘야 함
+
+            return true;
+        }
 
         List<string> scene;
 
@@ -110,7 +144,6 @@ namespace L250218
 
         public void InputProcess()
         {
-            
             Input.Process();
         }
         protected void Update()
@@ -119,7 +152,9 @@ namespace L250218
         }
         protected void Render()
         {
-            //Console.Clear();
+            SDL.SDL_SetRenderDrawColor(myRenderer, 0, 51, 0, 0);
+            SDL.SDL_RenderClear(myRenderer); //붓으로 화면 지우기
+
             world.Render();
 
             //back <-> front (flip)
@@ -136,33 +171,32 @@ namespace L250218
                     
                 }
             }
+            SDL.SDL_RenderPresent(myRenderer);
         }
         public void Run()
         {
-            float frameTime = 1000.0f / 60.0f;
-            float elapseTime = 0.0f;
             Console.CursorVisible = false;
             while (isRunning)
             {
-                Time.Update();
-                /*if(elapseTime >= frameTime)
-                {
-                  */  InputProcess();
-                    Update();
-                    Render();
-                    Input.ClearInput(); //입력장치 버퍼를 비워줘야 함 
-                    elapseTime = 0.0f;
-                /*}
-                else
-                {*/
-                    //elapseTime += Time.deltaTime;
-                //}
+                SDL.SDL_PollEvent(out myEvent);
 
-               // GameOver();
-               // NextLevel();
+                Time.Update();
+
+                //InputProcess();
+
+                switch (myEvent.type)
+                {
+                    case SDL.SDL_EventType.SDL_QUIT:
+                        isRunning = false;
+                        break;
+
+                }
+
+                Update();
+
+                Render();
+
             }
-            Console.Clear();
-            Console.WriteLine("게임 끝");
         }
         public void GameOver()
         {

@@ -15,6 +15,10 @@ namespace L250218
             Shape = _Shape;
             OrderLayer = 3;
             isTrigger = true;
+
+            color.r = 0;
+            color.g = 255;
+            color.b = 0;
         }
 
         public override void Update()

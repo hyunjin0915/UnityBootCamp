@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SDL2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,33 +16,37 @@ namespace L250218
             Shape = _Shape;
             OrderLayer = 4;
             isTrigger = true;
+
+            color.r = 0;
+            color.g = 0;
+            color.b = 255;
         }
         
         public override void Update()
         {
             
-            if(Input.GetKeyDown(ConsoleKey.W) )
+            if(Input.GetKeyDown(SDL.SDL_Keycode.SDLK_w) )
             {
                 if(!PredictionCollection(X, Y-1))
                 {
                     Y--;
                 }
             }
-            else if (Input.GetKeyDown(ConsoleKey.A) )
+            else if (Input.GetKeyDown(SDL.SDL_Keycode.SDLK_a) )
             {
                 if (!PredictionCollection(X-1, Y))
                 {
                     X--;
                 }
             }
-            else if (Input.GetKeyDown(ConsoleKey.S) )
+            else if (Input.GetKeyDown(SDL.SDL_Keycode.SDLK_s) )
             {
                 if (!PredictionCollection(X, Y+ 1))
                 {
                     Y++;
                 }
             }
-            else if (Input.GetKeyDown(ConsoleKey.D) )
+            else if (Input.GetKeyDown(SDL.SDL_Keycode.SDLK_d) )
             {
                 if (!PredictionCollection(X+1, Y))
                 {

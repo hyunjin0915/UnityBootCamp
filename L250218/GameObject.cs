@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SDL2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,10 @@ namespace L250218
         public int OrderLayer;
         public bool isTrigger = false;
         public bool isCollide = false;
+
+
+        public SDL.SDL_Color color;
+        public int spriteSize = 30;
 
         public bool PredictionCollection(int newX, int newY)
         {
@@ -37,8 +42,16 @@ namespace L250218
         public virtual void Render()
         {
             Engine.backBuffer[Y, X] = Shape;
-            /*Console.SetCursorPosition(X, Y);
-            Console.Write(Shape);*/
+            
+            SDL.SDL_SetRenderDrawColor(Engine.Instance.myRenderer, color.r, color.g, color.b, color.a);
+
+            SDL.SDL_Rect myRect;
+            myRect.x = X * spriteSize;
+            myRect.y = Y * spriteSize;
+            myRect.w = spriteSize;
+            myRect.h = spriteSize;
+
+            SDL.SDL_RenderFillRect(Engine.Instance.myRenderer, ref myRect);
         }
 
     }
