@@ -8,18 +8,14 @@ namespace L250218
 {
     public class World
     {
-        //public GameObject[] gameObjects =  new GameObject[100];
         List<GameObject> gameObjects = new List<GameObject>();
 
         public List<GameObject> GetAllGameObjects
         {
             get { return gameObjects; }
         }
-        int useGameObjCnt = 0;
         public void Instantiate(GameObject gameObject)
         {
-            /*gameObjects[useGameObjCnt] = gameObject;
-            useGameObjCnt++;*/
             gameObjects.Add(gameObject);
         }
 

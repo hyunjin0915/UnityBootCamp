@@ -26,7 +26,7 @@ namespace L250218
 
         protected string filename;
 
-        private float elapseTime = 0.005f;
+        private float elapseTime = 0.0f;
 
         SDL.SDL_Rect sourceRect;
         SDL.SDL_Rect destinationRect; //screen size
@@ -45,8 +45,7 @@ namespace L250218
             int X = gameObject.transform.X;
             int Y = gameObject.transform.Y;
 
-            //Console
-            Engine.backBuffer[Y, X] = Shape;
+            
             
             //Screen Bitmap
             destinationRect.x = X * spriteSize;

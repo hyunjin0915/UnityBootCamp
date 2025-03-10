@@ -55,6 +55,7 @@ namespace L250218
         }
         public bool Quit()
         {
+            SDL.SDL_DestroyRenderer(myRenderer);
             SDL.SDL_DestroyWindow(myWindow); //지우기
 
             SDL.SDL_Quit(); //라이브러리도 지워줘야 함
@@ -62,7 +63,7 @@ namespace L250218
             return true;
         }
 
-        List<string> scene;
+        
 
         //더블 버퍼링
         static public char[,] frontBuffer = new char[20, 40];
@@ -84,13 +85,9 @@ namespace L250218
             tempScene = tempScene.Replace("\0", "");
             scene = tempScene.Split("\r\n");*/
 
+            List<string> scene = new List<string>();
+            StreamReader sr = new StreamReader(path);
 
-            StreamReader sr = null;
-
-
-            scene = new List<string>();
-
-            sr = new StreamReader(path);
             while (!sr.EndOfStream)
             {
                 scene.Add(sr.ReadLine());
@@ -129,6 +126,8 @@ namespace L250218
                         spriteRenderer.colorKey.b = 255;
                         spriteRenderer.colorKey.a = 255;
                         spriteRenderer.LoadBMP("player.bmp", true);
+                        spriteRenderer.processTime = 150.0f;
+                        spriteRenderer.MaxCellCountX = 5;
 
                         spriteRenderer.Shape = 'P';
 
@@ -224,20 +223,6 @@ namespace L250218
 
             }
         }
-        /*public void GameOver()
-        {
-            if (player.X == monster.X && player.Y == monster.Y)
-            {
-                isRunning = false;
-            }
-        }
-        public void NextLevel()
-        {
-            if (player.X == goal.X && player.Y == goal.Y)
-            {
-                player.X = 1;
-                player.Y = 1;
-            }
-        }*/
+        
     }
 }
