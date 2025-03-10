@@ -44,8 +44,6 @@ namespace L250218
         {
             int X = gameObject.transform.X;
             int Y = gameObject.transform.Y;
-
-            
             
             //Screen Bitmap
             destinationRect.x = X * spriteSize;

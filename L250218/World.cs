@@ -44,18 +44,18 @@ namespace L250218
 
         public void Sort()
         {
-            /*for (int i = 0; i < gameObjects.Count; i++)
+            for (int i = 0; i < gameObjects.Count; i++)
             {
                 for (int j = i+1; j < gameObjects.Count; j++)
                 {
-                    if (gameObjects[i].OrderLayer > gameObjects[j].OrderLayer)
+                    if (gameObjects[i].GetComponent<SpriteRenderer>().OrderLayer > gameObjects[j].GetComponent<SpriteRenderer>().OrderLayer)
                     {
                         GameObject temp = gameObjects[i];
                         gameObjects[i] = gameObjects[j];
                         gameObjects[j] = temp;
                     }
                 }
-            }*/
+            }
         }
     }
 }
