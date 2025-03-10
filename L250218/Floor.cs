@@ -10,7 +10,7 @@ namespace L250218
     {
         public Floor(int _X, int _Y, char _Shape)
         {
-            X = _X;
+           /* X = _X;
             Y = _Y;
             Shape = _Shape;
             OrderLayer = 1;
@@ -18,6 +18,8 @@ namespace L250218
             color.r = 0;
             color.g = 0;
             color.b = 0;
+
+            LoadBMP("Data/floor.bmp");*/
         }
 
     }

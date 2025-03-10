@@ -8,7 +8,7 @@ namespace L250218
 {
     public class Monster : GameObject
     {
-        private Random random = new Random();
+        /*private Random random = new Random();
 
         private float elapseTime = 0.005f;
         public Monster(int _X, int _Y, char _Shape)
@@ -22,6 +22,8 @@ namespace L250218
             color.r = 100;
             color.g = 100;
             color.b = 100;
+
+            LoadBMP("Data/monster.bmp");
         }
 
         public override void Update()
@@ -77,6 +79,6 @@ namespace L250218
             }
             
         }
-        
+        */
     }
 }

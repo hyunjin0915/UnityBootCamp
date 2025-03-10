@@ -1,7 +1,7 @@
 ﻿using SDL2;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+//using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,7 +24,7 @@ namespace L250218
         }
 
         public World world;
-        public Player player;
+        public PlayerController player;
         public Monster monster;
         public Goal goal;
         public bool isRunning = true;
@@ -82,8 +82,8 @@ namespace L250218
             int readCount = fs.Read(buffer, 0, (int)fileSize);
             tempScene = Encoding.UTF8.GetString(buffer);
             tempScene = tempScene.Replace("\0", "");
-            scene = tempScene.Split("\r\n");
-*/
+            scene = tempScene.Split("\r\n");*/
+
 
             StreamReader sr = null;
 
@@ -117,13 +117,39 @@ namespace L250218
                     }
                     else if (scene[y][x] == 'P')
                     {
-                        player = new Player(x, y, scene[y][x]);
+                        GameObject player = new GameObject();
+                        player.name = "Player";
+                        player.transform.X = x;
+                        player.transform.Y = y;
+
+                        player.AddComponent<PlayerController>(new PlayerController());
+                        SpriteRenderer spriteRenderer =  player.AddComponent<SpriteRenderer>(new SpriteRenderer());
+                        spriteRenderer.colorKey.r = 255;
+                        spriteRenderer.colorKey.g = 0;
+                        spriteRenderer.colorKey.b = 255;
+                        spriteRenderer.colorKey.a = 255;
+                        spriteRenderer.LoadBMP("player.bmp", true);
+
+                        spriteRenderer.Shape = 'P';
 
                         world.Instantiate(player);
                     }
                     else if (scene[y][x] == 'M')
                     {
-                        monster = new Monster(x, y, scene[y][x]);
+                        GameObject monster = new GameObject();
+                        monster.name = "Monster";
+                        monster.transform.X = x;
+                        monster.transform.Y = y;
+
+                        SpriteRenderer spriteRenderer = monster.AddComponent<SpriteRenderer>(new SpriteRenderer());
+                        spriteRenderer.colorKey.r = 255;
+                        spriteRenderer.colorKey.g = 255;
+                        spriteRenderer.colorKey.b = 255;
+                        spriteRenderer.colorKey.a = 255;
+                        spriteRenderer.LoadBMP("monster.bmp");
+
+
+                        spriteRenderer.Shape = 'M';
 
                         world.Instantiate(monster);
                     }
@@ -134,7 +160,7 @@ namespace L250218
                         world.Instantiate(goal);
                     }
 
-                    Floor floor = new Floor(x, y,' ');
+                    Floor floor = new Floor(x, y, ' ');
 
                     world.Instantiate(floor);
                 }
@@ -162,13 +188,13 @@ namespace L250218
             {
                 for (int X = 0; X < 40; X++)
                 {
-                    if (frontBuffer[Y,X] != backBuffer[Y,X])
+                    if (frontBuffer[Y, X] != backBuffer[Y, X])
                     {
                         frontBuffer[Y, X] = backBuffer[Y, X];
                         Console.SetCursorPosition(X, Y);
                         Console.Write(backBuffer[Y, X]);
                     }
-                    
+
                 }
             }
             SDL.SDL_RenderPresent(myRenderer);
@@ -198,9 +224,9 @@ namespace L250218
 
             }
         }
-        public void GameOver()
+        /*public void GameOver()
         {
-            if(player.X == monster.X && player.Y == monster.Y)
+            if (player.X == monster.X && player.Y == monster.Y)
             {
                 isRunning = false;
             }
@@ -212,6 +238,6 @@ namespace L250218
                 player.X = 1;
                 player.Y = 1;
             }
-        }
+        }*/
     }
 }

@@ -10,7 +10,7 @@ namespace L250218
     {
         public Goal(int _X, int _Y, char _Shape)
         {
-            X = _X;
+            /*X = _X;
             Y = _Y;
             Shape = _Shape;
             OrderLayer = 3;
@@ -19,14 +19,9 @@ namespace L250218
             color.r = 0;
             color.g = 255;
             color.b = 0;
+
+            LoadBMP("Data/goal.bmp");*/
         }
 
-        public override void Update()
-        {
-            if (Engine.Instance.player.X == X && Engine.Instance.player.Y == Y)
-            {
-                Engine.Instance.isRunning = false;
-            }
-        }
-}
+    }
 }
