@@ -15,7 +15,7 @@ namespace L250218
         public abstract void Update();
 
         public GameObject gameObject;
-
+        public Transform transform;
 
         public T GetComponent<T>() where T : Component
         {

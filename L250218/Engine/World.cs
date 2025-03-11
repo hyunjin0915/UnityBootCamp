@@ -8,6 +8,9 @@ namespace L250218
 {
     public class World
     {
+        public delegate int SortCompare(GameObject first, GameObject second);
+        public SortCompare sortCompare;
+
         List<GameObject> gameObjects = new List<GameObject>();
 
         public List<GameObject> GetAllGameObjects
@@ -34,7 +37,7 @@ namespace L250218
         {
             for (int i = 0; i < gameObjects.Count; i++)
             {
-                SpriteRenderer spriteRenderer =  gameObjects[i].GetComponent<SpriteRenderer>();
+                Renderer spriteRenderer =  gameObjects[i].GetComponent<Renderer>();
                 if (spriteRenderer != null)
                 {
                     spriteRenderer.Render(); //spriterenderer 컴포넌트가 달린 오브젝트만 그리라는 뜻
@@ -48,12 +51,30 @@ namespace L250218
             {
                 for (int j = i+1; j < gameObjects.Count; j++)
                 {
-                    if (gameObjects[i].GetComponent<SpriteRenderer>().OrderLayer > gameObjects[j].GetComponent<SpriteRenderer>().OrderLayer)
+                    /*if (gameObjects[i].GetComponent<SpriteRenderer>().OrderLayer > gameObjects[j].GetComponent<SpriteRenderer>().OrderLayer)
+                    {
+                        GameObject temp = gameObjects[i];
+                        gameObjects[i] = gameObjects[j];
+                        gameObjects[j] = temp;
+                    }*/
+
+                    if (sortCompare(gameObjects[i], gameObjects[j]) > 0)
                     {
                         GameObject temp = gameObjects[i];
                         gameObjects[i] = gameObjects[j];
                         gameObjects[j] = temp;
                     }
+                }
+            }
+        }
+
+        public void Awake()
+        {
+            foreach(var choiceObject in gameObjects)
+            {
+                foreach(Component component in choiceObject.components)
+                {
+                    component.Awake();
                 }
             }
         }

@@ -24,9 +24,9 @@ namespace L250218
         }
 
         public World world;
+        public IntPtr Font;
         public PlayerController player;
-        public Monster monster;
-        public Goal goal;
+        public AIController monster;
         public bool isRunning = true;
 
         
@@ -49,12 +49,20 @@ namespace L250218
 
             myRenderer = SDL.SDL_CreateRenderer(myWindow, -1, SDL.SDL_RendererFlags.SDL_RENDERER_ACCELERATED |
                 SDL.SDL_RendererFlags.SDL_RENDERER_PRESENTVSYNC |
-                SDL.SDL_RendererFlags.SDL_RENDERER_TARGETTEXTURE);  
+                SDL.SDL_RendererFlags.SDL_RENDERER_TARGETTEXTURE);
 
+            string projectFolder = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+
+            SDL_ttf.TTF_Init();
+            //SDL_ttf.TTF_OpenFont(projectFolder + "/data/" + 30);
+            Font =  SDL_ttf.TTF_OpenFont("c:/Windows/Fonts/gulim.ttc", 30);
+            world = new World();
             return true;
         }
         public bool Quit()
         {
+            SDL_ttf.TTF_Quit();
+            isRunning = false;
             SDL.SDL_DestroyRenderer(myRenderer);
             SDL.SDL_DestroyWindow(myWindow); //지우기
 
@@ -71,20 +79,6 @@ namespace L250218
 
         public void Load(string path)
         {
-            /*string tempScene = "";
-            byte[] buffer = new byte[1024];
-            FileStream fs = new FileStream("level01.map", FileMode.Open);
-            int offset = 0;
-
-            fs.Seek(0, SeekOrigin.End); //커러를 맨끝으로 보냄
-            long fileSize = fs.Position;
-
-            fs.Seek(0, SeekOrigin.Begin); //다시 커서 처음으로
-            int readCount = fs.Read(buffer, 0, (int)fileSize);
-            tempScene = Encoding.UTF8.GetString(buffer);
-            tempScene = tempScene.Replace("\0", "");
-            scene = tempScene.Split("\r\n");*/
-
             List<string> scene = new List<string>();
             StreamReader sr = new StreamReader(path);
 
@@ -95,7 +89,7 @@ namespace L250218
             sr.Close();
 
 
-            world = new World();
+            
             for (int y = 0; y < scene.Count; y++)
             {
                 for (int x = 0; x < scene[y].Length; x++)
@@ -107,7 +101,7 @@ namespace L250218
                         wall.transform.X = x;
                         wall.transform.Y = y;
 
-                        SpriteRenderer spriteRenderer = wall.AddComponent<SpriteRenderer>(new SpriteRenderer());
+                        SpriteRenderer spriteRenderer = wall.AddComponent<SpriteRenderer>();
                         spriteRenderer.colorKey.r = 255;
                         spriteRenderer.colorKey.g = 255;
                         spriteRenderer.colorKey.b = 255;
@@ -115,37 +109,13 @@ namespace L250218
                         spriteRenderer.OrderLayer = 2;
                         spriteRenderer.LoadBMP("wall.bmp");
 
-                        
+                        wall.AddComponent<BoxCollider2D>();
 
                         spriteRenderer.Shape = 'W';
 
                         world.Instantiate(wall);
-                        /*Wall wall = new Wall(x, y, scene[y][x]);
-
-                        world.Instantiate(wall);*/
+                        
                     }
-                    /*else if (scene[y][x] == ' ')
-                    {
-                        GameObject floor = new GameObject();
-                        floor.name = "Floor";
-                        floor.transform.X = x;
-                        floor.transform.Y = y;
-
-                        SpriteRenderer spriteRenderer = floor.AddComponent<SpriteRenderer>(new SpriteRenderer());
-                        spriteRenderer.colorKey.r = 255;
-                        spriteRenderer.colorKey.g = 255;
-                        spriteRenderer.colorKey.b = 255;
-                        spriteRenderer.colorKey.a = 255;
-                        spriteRenderer.LoadBMP("floor.bmp");
-
-
-                        spriteRenderer.Shape = 'F';
-
-                        world.Instantiate(floor);
-                        *//*Floor floor = new Floor(x, y, scene[y][x]);
-
-                        world.Instantiate(floor);*//*
-                    }*/
                     else if (scene[y][x] == 'P')
                     {
                         GameObject player = new GameObject();
@@ -165,6 +135,9 @@ namespace L250218
                         spriteRenderer.OrderLayer = 5;
                         spriteRenderer.Shape = 'P';
 
+                        player.AddComponent<CharacterController2D>();
+                        
+
                         world.Instantiate(player);
                     }
                     else if (scene[y][x] == 'M')
@@ -173,6 +146,10 @@ namespace L250218
                         monster.name = "Monster";
                         monster.transform.X = x;
                         monster.transform.Y = y;
+
+                        monster.AddComponent<AIController>(new AIController());
+                        CharacterController2D characterController2D = monster.AddComponent<CharacterController2D>();
+                        characterController2D.isTrigger = true;
 
                         SpriteRenderer spriteRenderer = monster.AddComponent<SpriteRenderer>(new SpriteRenderer());
                         spriteRenderer.colorKey.r = 255;
@@ -202,8 +179,9 @@ namespace L250218
                         spriteRenderer.OrderLayer = 3;
                         spriteRenderer.LoadBMP("goal.bmp");
 
-
                         spriteRenderer.Shape = 'G';
+                        CircleCollider2D circleCollider2D = goal.AddComponent<CircleCollider2D>(new CircleCollider2D());
+                        circleCollider2D.isTrigger = true;
 
                         world.Instantiate(goal);
                     }
@@ -225,13 +203,15 @@ namespace L250218
                     fspriteRenderer.Shape = 'F';
 
                     world.Instantiate(floor);
-
-                    /*Floor floor = new Floor(x, y, ' ');
-
-                    world.Instantiate(floor);*/
                 }
+                //심판 생성
+                GameObject gameManager = new GameObject();
+                gameManager.name = "GameManager";
+                gameManager.AddComponent<GameManager>();
+                world.Instantiate(gameManager);
             }
             world.Sort();
+            Awake();
         }
 
         public void InputProcess()
@@ -290,6 +270,14 @@ namespace L250218
 
             }
         }
-        
+        public void Awake()
+        {
+            world.Awake();
+        }
+        public void setSortCompare(World.SortCompare inSortCompare)
+        {
+            world.sortCompare = inSortCompare;
+        }
+
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace L250218
 {
-    public class SpriteRenderer : Component
+    public class SpriteRenderer : Renderer
     {
         public int OrderLayer;
 
@@ -19,8 +19,8 @@ namespace L250218
         protected IntPtr myTexture;
         protected IntPtr mySurface;
 
-        protected int spriteIndexX = 0;
-        protected int spriteIndexY = 0;
+        public int spriteIndexX = 0;
+        public int spriteIndexY = 0;
 
         public SDL.SDL_Color colorKey;
 
@@ -37,7 +37,10 @@ namespace L250218
 
         public SpriteRenderer() { }
 
-        
+        ~SpriteRenderer() 
+        {
+            SDL.SDL_DestroyTexture(myTexture);
+        }
 
 
         public override void Update()
@@ -89,7 +92,7 @@ namespace L250218
             }
         }
 
-        public virtual void Render()
+        public override void Render()
         {
             int X = gameObject.transform.X;
             int Y = gameObject.transform.Y;
