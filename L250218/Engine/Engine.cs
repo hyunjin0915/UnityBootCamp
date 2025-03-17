@@ -1,4 +1,5 @@
-﻿using SDL2;
+﻿using Newtonsoft.Json;
+using SDL2;
 using System;
 using System.Collections.Generic;
 //using System.Linq;
@@ -212,6 +213,25 @@ namespace L250218
             }
             world.Sort();
             Awake();
+
+            /* string SceneFile = JsonConvert.SerializeObject(world.GetAllGameObjects, new JsonSerializerSettings
+             {
+                 TypeNameHandling = TypeNameHandling.All,
+                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+             });
+             Console.WriteLine(SceneFile);
+             StreamWriter sw = new StreamWriter("sample.uasset");
+             sw.WriteLine(SceneFile);
+             sw.Close();*/
+
+            StreamReader sr2 = new StreamReader("sample.uasset");
+            string SceneFile = sr2.ReadToEnd();
+
+            List<GameObject> gos = JsonConvert.DeserializeObject<List<GameObject>>(SceneFile, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.All,
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
         }
 
         public void InputProcess()

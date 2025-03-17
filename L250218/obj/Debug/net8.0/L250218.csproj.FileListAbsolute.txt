@@ -66,3 +66,4 @@ C:\Github\UnityBootCamp\L250218\obj\Debug\net8.0\refint\L250218.dll
 C:\Github\UnityBootCamp\L250218\obj\Debug\net8.0\L250218.pdb
 C:\Github\UnityBootCamp\L250218\obj\Debug\net8.0\L250218.genruntimeconfig.cache
 C:\Github\UnityBootCamp\L250218\obj\Debug\net8.0\ref\L250218.dll
+C:\hj\GitHub\UnityBootCamp\L250218\bin\Debug\net8.0\Newtonsoft.Json.dll

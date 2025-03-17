@@ -1,0 +1,7 @@
+C:\hj\GitHub\UnityBootCamp\0317\NetworkSample\Client\bin\Debug\Client.exe.config
+C:\hj\GitHub\UnityBootCamp\0317\NetworkSample\Client\bin\Debug\Client.exe
+C:\hj\GitHub\UnityBootCamp\0317\NetworkSample\Client\bin\Debug\Client.pdb
+C:\hj\GitHub\UnityBootCamp\0317\NetworkSample\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\hj\GitHub\UnityBootCamp\0317\NetworkSample\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\hj\GitHub\UnityBootCamp\0317\NetworkSample\Client\obj\Debug\Client.exe
+C:\hj\GitHub\UnityBootCamp\0317\NetworkSample\Client\obj\Debug\Client.pdb

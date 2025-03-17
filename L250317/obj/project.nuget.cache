@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "KRzSH2GZIvU=",
+  "success": true,
+  "projectFilePath": "C:\\hj\\GitHub\\UnityBootCamp\\L250317\\L250317.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hyunj\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
