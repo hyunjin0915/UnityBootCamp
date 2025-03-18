@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:engine\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\components\\textrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:components\\textrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\engine\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:engine\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\components\\textrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:components\\textrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\engine\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,13 +90,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "TextRenderer.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Components\\TextRenderer.cs",
               "RelativeDocumentMoniker": "Components\\TextRenderer.cs",
               "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Components\\TextRenderer.cs",
               "RelativeToolTip": "Components\\TextRenderer.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAABFwBMAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T08:39:29.484Z",
               "EditorCaption": ""
@@ -159,9 +159,9 @@
               "Title": "Engine.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Engine\\Engine.cs",
               "RelativeDocumentMoniker": "Engine\\Engine.cs",
-              "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Engine\\Engine.cs*",
-              "RelativeToolTip": "Engine\\Engine.cs*",
-              "ViewState": "AgIAAMQAAAAAAAAAAAAqwNwAAAAPAAAAAAAAAA==",
+              "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Engine\\Engine.cs",
+              "RelativeToolTip": "Engine\\Engine.cs",
+              "ViewState": "AgIAANMAAAAAAAAAAAAqwOEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T06:32:48.77Z",
               "EditorCaption": ""
@@ -233,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SpriteRenderer.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Engine\\SpriteRenderer.cs",
               "RelativeDocumentMoniker": "Engine\\SpriteRenderer.cs",
@@ -246,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "World.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Engine\\World.cs",
               "RelativeDocumentMoniker": "Engine\\World.cs",
@@ -285,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

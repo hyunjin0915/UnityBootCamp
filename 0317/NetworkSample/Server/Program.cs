@@ -14,6 +14,28 @@ namespace Server
         {
 
             Socket listenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            IPEndPoint listenEndPoint = new IPEndPoint(IPAddress.Any, 4000);
+
+            listenSocket.Bind(listenEndPoint);
+            listenSocket.Listen(10);
+            while(true)
+            {
+                Socket clientSocket = listenSocket.Accept();
+                byte[] buffer = new byte[1024];
+                int RecvLength = clientSocket.Receive(buffer);
+                string str = Encoding.UTF8.GetString(buffer);
+                Console.WriteLine(str);
+
+                clientSocket.Send(buffer);
+                clientSocket.Close();
+            }
+
+            listenSocket.Close();
+
+
+
+            
+            /*Socket listenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
             //IPEndPoint listenEndPoint = new IPEndPoint(IPAddress.Parse("192.168.0.22"), 4000);
             IPEndPoint listenEndPoint = new IPEndPoint(IPAddress.Any, 4000);
@@ -62,7 +84,7 @@ namespace Server
                 clientSocket.Close();
             }
 
-            listenSocket.Close();
+            listenSocket.Close();*/
             
         }
     }

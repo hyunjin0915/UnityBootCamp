@@ -13,6 +13,17 @@ namespace Client
         static void Main(string[] args)
         {
             Socket serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Loopback, 4000);
+            serverSocket.Connect(serverEndPoint);
+
+            byte[] buffer = new byte[1024];
+
+            String message = "message";
+            buffer = Encoding.UTF8.GetBytes(message);
+            int sendLength = serverSocket.Send(buffer, 0, buffer.Length, SocketFlags.None);
+
+            serverSocket.Close();
+/*            Socket serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
             //내 자신에게 보내는 것 - 테스트 용(= "127.0.0.1" 이랑 같은 뜻)
             //IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Parse("192.168.0.22"), 4000);
@@ -35,6 +46,6 @@ namespace Client
             Console.WriteLine(Encoding.UTF8.GetString(buffer2));
 
             serverSocket.Close();
-        }
+*/        }
     }
 }
