@@ -30,8 +30,19 @@ namespace Client
 
             serverSocket.Connect(clientEndPoint);
 
+            FileStream fsOutputt = new FileStream("1_copy.webp", FileMode.CreateNew);
+
             byte[] buffer = new byte[1024];
-            int recevLength =serverSocket.Receive(buffer);
+            int ReceiveSize = 0;
+            do
+            {
+                ReceiveSize = serverSocket.Receive(buffer);
+                fsOutputt.Write(buffer, 0, ReceiveSize);
+            } while (ReceiveSize > 0);
+
+            fsOutputt.Close();
+            serverSocket.Close();
+            /*int recevLength =serverSocket.Receive(buffer);
         
 
             string jsonString = Encoding.UTF8.GetString(buffer);
@@ -40,7 +51,7 @@ namespace Client
             byte[] imageBytes = Convert.FromBase64String(receiveSample.imgStr);
 
             File.WriteAllBytes("receiveImg.webp", imageBytes);
-            Console.WriteLine(receiveSample.imgStr);
+            Console.WriteLine(receiveSample.imgStr);*/
         }
     }
 }

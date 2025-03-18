@@ -1,0 +1,7 @@
+C:\hj\GitHub\UnityBootCamp\L250318_UDPServer\L250318_UDPClient\bin\Debug\L250318_UDPClient.exe.config
+C:\hj\GitHub\UnityBootCamp\L250318_UDPServer\L250318_UDPClient\bin\Debug\L250318_UDPClient.exe
+C:\hj\GitHub\UnityBootCamp\L250318_UDPServer\L250318_UDPClient\bin\Debug\L250318_UDPClient.pdb
+C:\hj\GitHub\UnityBootCamp\L250318_UDPServer\L250318_UDPClient\obj\Debug\L250318_UDPClient.csproj.AssemblyReference.cache
+C:\hj\GitHub\UnityBootCamp\L250318_UDPServer\L250318_UDPClient\obj\Debug\L250318_UDPClient.csproj.CoreCompileInputs.cache
+C:\hj\GitHub\UnityBootCamp\L250318_UDPServer\L250318_UDPClient\obj\Debug\L250318_UDPClient.exe
+C:\hj\GitHub\UnityBootCamp\L250318_UDPServer\L250318_UDPClient\obj\Debug\L250318_UDPClient.pdb

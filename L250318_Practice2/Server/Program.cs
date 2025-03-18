@@ -23,12 +23,30 @@ namespace Server
         }
         static void Main(string[] args)
         {
-            Socket listenSocket = new Socket (AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            Socket listenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint listenEndPoiint = new IPEndPoint(IPAddress.Any, 4000);
 
-            listenSocket.Bind (listenEndPoiint);
+
+            listenSocket.Bind(listenEndPoiint);
             listenSocket.Listen(10);
 
+            FileStream fsInput = new FileStream("1.webp", FileMode.Open);
+
+            byte[] buffer = new byte[4096];
+            int ReadSize = 0;
+            do
+            {
+                ReadSize = fsInput.Read(buffer, 0, buffer.Length);
+                listenSocket.Send(buffer, ReadSize, SocketFlags.None);
+
+            } while (ReadSize > 0);
+            
+
+            fsInput.Close();
+            listenSocket.Close();
+
+
+/*
             bool isRunning = true;
             while(isRunning)
             {
@@ -47,6 +65,6 @@ namespace Server
 
                 clientSocket.Close();
             }
-        }
+*/        }
     }
 }
