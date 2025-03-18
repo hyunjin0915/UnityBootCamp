@@ -1,0 +1,10 @@
+C:\hj\GitHub\UnityBootCamp\L250318_Practice2\Server\bin\Debug\Server.exe.config
+C:\hj\GitHub\UnityBootCamp\L250318_Practice2\Server\bin\Debug\Server.exe
+C:\hj\GitHub\UnityBootCamp\L250318_Practice2\Server\bin\Debug\Server.pdb
+C:\hj\GitHub\UnityBootCamp\L250318_Practice2\Server\bin\Debug\Newtonsoft.Json.dll
+C:\hj\GitHub\UnityBootCamp\L250318_Practice2\Server\bin\Debug\Newtonsoft.Json.xml
+C:\hj\GitHub\UnityBootCamp\L250318_Practice2\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\hj\GitHub\UnityBootCamp\L250318_Practice2\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\hj\GitHub\UnityBootCamp\L250318_Practice2\Server\obj\Debug\Server.csproj.Up2Date
+C:\hj\GitHub\UnityBootCamp\L250318_Practice2\Server\obj\Debug\Server.exe
+C:\hj\GitHub\UnityBootCamp\L250318_Practice2\Server\obj\Debug\Server.pdb
