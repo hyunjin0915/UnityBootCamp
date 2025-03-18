@@ -43,15 +43,20 @@ namespace L250318
                 {
                     isRunning = false;
                 }
+
                 String str = Encoding.UTF8.GetString(buffer);
+                Data receiveData = JsonConvert.DeserializeObject<Data>(str);
+                if(receiveData.message.Equals("안녕하세요"))
+                {
+                    string jsonData = JsonConvert.SerializeObject(data);
+
+                    byte[] buffer2 = new byte[1024];
+                    buffer2 = Encoding.UTF8.GetBytes(jsonData);
+                    clientSocket.Send(buffer2, 0, buffer2.Length, SocketFlags.None);
+                }
                 Console.WriteLine(str);
 
                 //string message = "반가워요";
-                string jsonData = JsonConvert.SerializeObject(data);
-                
-                byte[] buffer2 = new byte[1024];
-                buffer2 = Encoding.UTF8.GetBytes(jsonData);
-                clientSocket.Send(buffer2, 0, buffer2.Length, SocketFlags.None); 
 
                 clientSocket.Close();
             }
