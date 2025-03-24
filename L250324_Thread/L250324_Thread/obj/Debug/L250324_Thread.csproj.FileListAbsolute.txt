@@ -1,0 +1,7 @@
+C:\hj\GitHub\UnityBootCamp\L250324_Thread\L250324_Thread\bin\Debug\L250324_Thread.exe.config
+C:\hj\GitHub\UnityBootCamp\L250324_Thread\L250324_Thread\bin\Debug\L250324_Thread.exe
+C:\hj\GitHub\UnityBootCamp\L250324_Thread\L250324_Thread\bin\Debug\L250324_Thread.pdb
+C:\hj\GitHub\UnityBootCamp\L250324_Thread\L250324_Thread\obj\Debug\L250324_Thread.csproj.AssemblyReference.cache
+C:\hj\GitHub\UnityBootCamp\L250324_Thread\L250324_Thread\obj\Debug\L250324_Thread.csproj.CoreCompileInputs.cache
+C:\hj\GitHub\UnityBootCamp\L250324_Thread\L250324_Thread\obj\Debug\L250324_Thread.exe
+C:\hj\GitHub\UnityBootCamp\L250324_Thread\L250324_Thread\obj\Debug\L250324_Thread.pdb
