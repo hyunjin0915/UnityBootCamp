@@ -1,6 +1,8 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using MySqlConnector;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -59,25 +61,80 @@ namespace Server
                         string JsonString = Encoding.UTF8.GetString(dataBuffer);
                         Console.WriteLine(JsonString);
 
+                        string connectionString = "server=localhost;user=root;database=membership;password=hj0428!!";
+                        MySqlConnection mySqlConnection = new MySqlConnection(connectionString);
+
                         JObject clientData = JObject.Parse(JsonString);
-
-                        string message = "{ \"message\" : \"" + clientData.Value<String>("message") + "\"}";
-                        byte[] messageBuffer = Encoding.UTF8.GetBytes(message);
-                        ushort length = (ushort)IPAddress.HostToNetworkOrder((short)messageBuffer.Length);
-
-                        headerBuffer = BitConverter.GetBytes(length);
-
-                        byte[] packetBuffer = new byte[headerBuffer.Length + messageBuffer.Length];
-                        Buffer.BlockCopy(headerBuffer, 0, packetBuffer, 0, headerBuffer.Length);
-                        Buffer.BlockCopy(messageBuffer, 0, packetBuffer, headerBuffer.Length, messageBuffer.Length);
-                        lock(_lock)
+                        string code = clientData.Value<string>("code");
+                        try
                         {
-                            foreach (Socket sendSocket in clientSockets)
+                            if (code.CompareTo("Login") == 0)
                             {
-                                int SendLength = sendSocket.Send(packetBuffer, packetBuffer.Length, SocketFlags.None);
+                                string userId = clientData.Value<string>("id");
+                                string userPassword = clientData.Value<string>("password");
+
+                                mySqlConnection.Open();
+                                MySqlCommand mySqlCommand = new MySqlCommand();
+                                mySqlCommand.Connection = mySqlConnection;
+
+                                mySqlCommand.CommandText = "select * from users where user_id = @user_id and user_password = @user_password";
+                                mySqlCommand.Prepare();
+                                mySqlCommand.Parameters.AddWithValue("@user_id", userId);
+                                mySqlCommand.Parameters.AddWithValue("@user_password", userPassword);
+
+                                MySqlDataReader dataReader = mySqlCommand.ExecuteReader();
+
+                                if (dataReader.Read()) //로그인 성공
+                                {
+                                    JObject result = new JObject();
+                                    result.Add("code", "loginresult");
+                                    result.Add("message", "success");
+                                    result.Add("name", dataReader["name"].ToString());
+                                    result.Add("email", dataReader["email"].ToString());
+                                    SendPacket(clientSocket, result.ToString());
+                                }
+                                else //실패
+                                {
+                                    JObject result = new JObject();
+                                    result.Add("code", "loginresult");
+                                    result.Add("message", "fail");
+                                    SendPacket(clientSocket, result.ToString());
+                                }
+                            }
+                            else if (code.CompareTo("SignIn") == 0)
+                            {
+                                string userId = clientData.Value<string>("id");
+                                string userPassword = clientData.Value<string>("password");
+                                string name = clientData.Value<string>("name");
+                                string email = clientData.Value<string>("email");
+
+                                mySqlConnection.Open();
+                                MySqlCommand mySqlCommand2 = new MySqlCommand();
+                                mySqlCommand2.Connection = mySqlConnection;
+
+                                mySqlCommand2.CommandText = "insert into users (user_id, user_password, name, email) values ( @user_id, @user_password, @name, @email)";
+                                mySqlCommand2.Prepare();
+                                mySqlCommand2.Parameters.AddWithValue("@user_id", userId);
+                                mySqlCommand2.Parameters.AddWithValue("@user_password", userPassword);
+                                mySqlCommand2.Parameters.AddWithValue("@name", name);
+                                mySqlCommand2.Parameters.AddWithValue("@email", email);
+                                mySqlCommand2.ExecuteNonQuery();
+
+                                //가입 성공
+                                JObject result = new JObject();
+                                result.Add("code", "signinresult");
+                                result.Add("message", "success");
+                                SendPacket(clientSocket, result.ToString());
                             }
                         }
-                        
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        finally
+                        {
+                            mySqlConnection.Close();
+                        }
                     }
                     else
                     {
@@ -101,9 +158,9 @@ namespace Server
                                 int SendLength = sendSocket.Send(packetBuffer, packetBuffer.Length, SocketFlags.None);
                             }
                         }
-
                         return;
                     }
+                    
                 }
                 catch (Exception e)
                 {
@@ -137,6 +194,21 @@ namespace Server
             
         }
 
+        static void SendPacket(Socket ToSocket, string message) //따로 전송 함수로 빼줌
+        {
+            byte[] messageBuffer = Encoding.UTF8.GetBytes(message);
+            ushort length = (ushort)IPAddress.HostToNetworkOrder((short)messageBuffer.Length);
+
+            byte[] headerBuffer = BitConverter.GetBytes(length);
+
+            headerBuffer = BitConverter.GetBytes(length);
+
+            byte[] packetBuffer = new byte[headerBuffer.Length + messageBuffer.Length];
+            Buffer.BlockCopy(headerBuffer, 0, packetBuffer, 0, headerBuffer.Length);
+            Buffer.BlockCopy(messageBuffer, 0, packetBuffer, headerBuffer.Length, messageBuffer.Length);
+
+            int SendLength = ToSocket.Send(packetBuffer, packetBuffer.Length, SocketFlags.None);
+        }
 
         static void Main(string[] args)
         {
@@ -150,6 +222,7 @@ namespace Server
 
             Thread acceptThread = new Thread(new ThreadStart(AcceptThread));
             acceptThread.IsBackground = true;
+
             acceptThread.Start();
 
             acceptThread.Join();
