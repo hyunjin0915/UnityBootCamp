@@ -68,7 +68,7 @@ namespace Server
                         string code = clientData.Value<string>("code");
                         try
                         {
-                            if (code.CompareTo("Login") == 0)
+                            if (code.CompareTo("login") == 0)
                             {
                                 string userId = clientData.Value<string>("id");
                                 string userPassword = clientData.Value<string>("password");
@@ -89,8 +89,8 @@ namespace Server
                                     JObject result = new JObject();
                                     result.Add("code", "loginresult");
                                     result.Add("message", "success");
-                                    result.Add("name", dataReader["name"].ToString());
-                                    result.Add("email", dataReader["email"].ToString());
+                                    result.Add("name", dataReader["user_name"].ToString());
+                                    result.Add("email", dataReader["user_email"].ToString());
                                     SendPacket(clientSocket, result.ToString());
                                 }
                                 else //실패
@@ -101,7 +101,7 @@ namespace Server
                                     SendPacket(clientSocket, result.ToString());
                                 }
                             }
-                            else if (code.CompareTo("SignIn") == 0)
+                            else if (code.CompareTo("signin") == 0)
                             {
                                 string userId = clientData.Value<string>("id");
                                 string userPassword = clientData.Value<string>("password");
@@ -112,12 +112,12 @@ namespace Server
                                 MySqlCommand mySqlCommand2 = new MySqlCommand();
                                 mySqlCommand2.Connection = mySqlConnection;
 
-                                mySqlCommand2.CommandText = "insert into users (user_id, user_password, name, email) values ( @user_id, @user_password, @name, @email)";
+                                mySqlCommand2.CommandText = "insert into users (user_id, user_password, user_name, user_email) values ( @user_id, @user_password, @user_name, @user_email)";
                                 mySqlCommand2.Prepare();
                                 mySqlCommand2.Parameters.AddWithValue("@user_id", userId);
                                 mySqlCommand2.Parameters.AddWithValue("@user_password", userPassword);
-                                mySqlCommand2.Parameters.AddWithValue("@name", name);
-                                mySqlCommand2.Parameters.AddWithValue("@email", email);
+                                mySqlCommand2.Parameters.AddWithValue("@user_name", name);
+                                mySqlCommand2.Parameters.AddWithValue("@user_email", email);
                                 mySqlCommand2.ExecuteNonQuery();
 
                                 //가입 성공

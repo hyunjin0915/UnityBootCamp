@@ -48,13 +48,13 @@ namespace Client
 
             clientSocket.Connect(clientEndPoint); //접속이 성공하면 
 
-            JObject result = new JObject();
-            result.Add("code", "SignIn");
+            /*JObject result = new JObject();
+            result.Add("code", "signin");
             result.Add("id", "apple");
             result.Add("password", "1234");
             result.Add("name", "mumu");
             result.Add("email", "star@gmail.com");
-            SendPacket(clientSocket,result.ToString());
+            SendPacket(clientSocket,result.ToString());*/
 
 
             string JsonString;
