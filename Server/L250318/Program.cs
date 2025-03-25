@@ -126,6 +126,23 @@ namespace Server
                                 result.Add("message", "success");
                                 SendPacket(clientSocket, result.ToString());
                             }
+                            else if (code.CompareTo("Chat") == 0)
+                            {
+                                string userId = clientData.Value<string>("id");
+                                string chatMessage = clientData.Value<string>("chatMessage");
+
+                                //채팅 성공
+                                JObject result = new JObject();
+                                result.Add("code", "ChatResult");
+                                result.Add("id", userId);
+                               
+                                result.Add("chatMessage", chatMessage);
+                                foreach (Socket sendSocket in clientSockets)
+                                {
+                                    SendPacket(sendSocket, result.ToString());
+                                }
+                                
+                            }
                         }
                         catch (Exception e)
                         {

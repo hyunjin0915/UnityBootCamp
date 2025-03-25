@@ -28,8 +28,21 @@
         },
         {
           "DockedWidth": 230,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\Server\\L250318\\Program.cs",
+              "RelativeDocumentMoniker": "L250318\\Program.cs",
+              "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\Server\\L250318\\Program.cs",
+              "RelativeToolTip": "L250318\\Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAmwDIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T08:21:33.507Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -41,19 +54,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T08:03:16.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\Server\\L250318\\Program.cs",
-              "RelativeDocumentMoniker": "L250318\\Program.cs",
-              "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\Server\\L250318\\Program.cs",
-              "RelativeToolTip": "L250318\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowDQAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T08:21:33.507Z",
               "EditorCaption": ""
             }
           ]

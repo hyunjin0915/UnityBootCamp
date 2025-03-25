@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -6,6 +8,16 @@ using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
+[Serializable]
+public class ChatPacket
+{
+    public string code;
+    public string id;
+    public string chatMessage;
+}
+
+
 
 [Serializable]
 public class LogInPacket
@@ -25,6 +37,15 @@ public class SignInPacket
     public string email;
 }
 
+public class PostBox
+{
+    private Queue<string> messageQueue;
+
+    public PostBox()
+    {
+        this.messageQueue = new Queue<string>();
+    }
+}
 
 public class NetworkManager : MonoBehaviour
 {
@@ -40,6 +61,13 @@ public class NetworkManager : MonoBehaviour
     public TMP_InputField NewNameUI;
     public TMP_InputField NewEmailUI;
 
+    LogInPacket loginPacket;
+
+    public TMP_InputField chatMessageUI;
+    public TMP_Text chatBlockUI;
+    private string chatTexts = "";
+
+    Action update;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -59,7 +87,10 @@ public class NetworkManager : MonoBehaviour
 
            string jsonString = Encoding.UTF8.GetString(recvBuffer);
             //여기서 json 분해해서  파싱하기 
-
+            ChatPacket recvChat = JsonUtility.FromJson<ChatPacket>(jsonString);
+            chatTexts += recvChat.chatMessage;
+            update.Invoke();
+            //chatBlockUI.text = chatTexts;
             Debug.Log(jsonString);
             Thread.Sleep(10);
         }
@@ -91,12 +122,12 @@ public class NetworkManager : MonoBehaviour
 
     public void OnLogin()
     {
-        LogInPacket packet = new LogInPacket();
-        packet.code = "Login";
-        packet.id = idUI.text;
-        packet.password = passwordUI.text;
+        loginPacket = new LogInPacket();
+        loginPacket.code = "Login";
+        loginPacket.id = idUI.text;
+        loginPacket.password = passwordUI.text;
 
-        SendPacket(JsonUtility.ToJson(packet));
+        SendPacket(JsonUtility.ToJson(loginPacket));
     }
 
     public void OnSignIn()
@@ -110,6 +141,26 @@ public class NetworkManager : MonoBehaviour
 
         SendPacket(JsonUtility.ToJson(packet));
     }
+
+    public void OnSendChat()
+    {
+        ChatPacket packet = new ChatPacket();
+        packet.code = "Chat";
+        packet.id = loginPacket.id;
+        packet.chatMessage = chatMessageUI.text;
+
+        SendPacket(JsonUtility.ToJson(packet));
+    }
+
+    private IEnumerator CheckQueue()
+    {
+        WaitForSeconds waitSec = new WaitForSeconds(1);
+        while (true)
+        {
+            
+        }
+    }
+
     public void OnApplicationQuit()
     {
         if(recvThread != null)
