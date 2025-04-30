@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\components\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:components\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\l250218.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:l250218.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\components\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:components\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\components\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|solutionrelative:components\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{825F6A69-A790-47CB-ABCE-3963B6F65F73}|L250218.csproj|c:\\hj\\github\\unitybootcamp\\l250218\\components\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 209,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TextRenderer.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Components\\TextRenderer.cs",
               "RelativeDocumentMoniker": "Components\\TextRenderer.cs",
@@ -102,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Components\\PlayerController.cs",
               "RelativeDocumentMoniker": "Components\\PlayerController.cs",
@@ -110,11 +110,12 @@
               "RelativeToolTip": "Components\\PlayerController.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAIwDkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T08:33:26.875Z"
+              "WhenOpened": "2025-03-11T08:33:26.875Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Renderer.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Engine\\Renderer.cs",
               "RelativeDocumentMoniker": "Engine\\Renderer.cs",
@@ -126,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Components\\GameManager.cs",
               "RelativeDocumentMoniker": "Components\\GameManager.cs",
@@ -150,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Engine.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Engine\\Engine.cs",
               "RelativeDocumentMoniker": "Engine\\Engine.cs",
@@ -158,8 +159,7 @@
               "RelativeToolTip": "Engine\\Engine.cs",
               "ViewState": "AgIAANMAAAAAAAAAAAAqwNoAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T06:32:48.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T06:32:48.77Z"
             },
             {
               "$type": "Document",
@@ -199,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "L250218.csproj",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\L250218.csproj",
               "RelativeDocumentMoniker": "L250218.csproj",
@@ -224,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SpriteRenderer.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Engine\\SpriteRenderer.cs",
               "RelativeDocumentMoniker": "Engine\\SpriteRenderer.cs",
@@ -236,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "World.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Engine\\World.cs",
               "RelativeDocumentMoniker": "Engine\\World.cs",
@@ -272,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250218\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

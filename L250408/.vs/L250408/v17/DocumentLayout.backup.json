@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\hj\\GitHub\\UnityBootCamp\\L250408\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5C0B28-CB19-4C73-8E24-FF14DE73340F}|L250408\\L250408.csproj|c:\\hj\\github\\unitybootcamp\\l250408\\l250408\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C5C0B28-CB19-4C73-8E24-FF14DE73340F}|L250408\\L250408.csproj|solutionrelative:l250408\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 209,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\hj\\GitHub\\UnityBootCamp\\L250408\\L250408\\Program.cs",
+              "RelativeDocumentMoniker": "L250408\\Program.cs",
+              "ToolTip": "C:\\hj\\GitHub\\UnityBootCamp\\L250408\\L250408\\Program.cs",
+              "RelativeToolTip": "L250408\\Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAmwCwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T00:25:31.543Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

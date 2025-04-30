@@ -1,0 +1,15 @@
+C:\hj\GitHub\UnityBootCamp\L20250428\bin\Debug\net8.0\L20250428.exe
+C:\hj\GitHub\UnityBootCamp\L20250428\bin\Debug\net8.0\L20250428.deps.json
+C:\hj\GitHub\UnityBootCamp\L20250428\bin\Debug\net8.0\L20250428.runtimeconfig.json
+C:\hj\GitHub\UnityBootCamp\L20250428\bin\Debug\net8.0\L20250428.dll
+C:\hj\GitHub\UnityBootCamp\L20250428\bin\Debug\net8.0\L20250428.pdb
+C:\hj\GitHub\UnityBootCamp\L20250428\obj\Debug\net8.0\L20250428.GeneratedMSBuildEditorConfig.editorconfig
+C:\hj\GitHub\UnityBootCamp\L20250428\obj\Debug\net8.0\L20250428.AssemblyInfoInputs.cache
+C:\hj\GitHub\UnityBootCamp\L20250428\obj\Debug\net8.0\L20250428.AssemblyInfo.cs
+C:\hj\GitHub\UnityBootCamp\L20250428\obj\Debug\net8.0\L20250428.csproj.CoreCompileInputs.cache
+C:\hj\GitHub\UnityBootCamp\L20250428\obj\Debug\net8.0\L20250428.sourcelink.json
+C:\hj\GitHub\UnityBootCamp\L20250428\obj\Debug\net8.0\L20250428.dll
+C:\hj\GitHub\UnityBootCamp\L20250428\obj\Debug\net8.0\refint\L20250428.dll
+C:\hj\GitHub\UnityBootCamp\L20250428\obj\Debug\net8.0\L20250428.pdb
+C:\hj\GitHub\UnityBootCamp\L20250428\obj\Debug\net8.0\L20250428.genruntimeconfig.cache
+C:\hj\GitHub\UnityBootCamp\L20250428\obj\Debug\net8.0\ref\L20250428.dll

@@ -1,0 +1,7 @@
+C:\hj\GitHub\UnityBootCamp\L250408\L250408\bin\Debug\L250408.exe.config
+C:\hj\GitHub\UnityBootCamp\L250408\L250408\bin\Debug\L250408.exe
+C:\hj\GitHub\UnityBootCamp\L250408\L250408\bin\Debug\L250408.pdb
+C:\hj\GitHub\UnityBootCamp\L250408\L250408\obj\Debug\L250408.csproj.AssemblyReference.cache
+C:\hj\GitHub\UnityBootCamp\L250408\L250408\obj\Debug\L250408.csproj.CoreCompileInputs.cache
+C:\hj\GitHub\UnityBootCamp\L250408\L250408\obj\Debug\L250408.exe
+C:\hj\GitHub\UnityBootCamp\L250408\L250408\obj\Debug\L250408.pdb
